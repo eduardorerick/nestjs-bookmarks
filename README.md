@@ -1,73 +1,51 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Bookmark CRUD REST API with NestJS
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Sample project to study NestJS making a CRUD, auth and jwt strategy, with tests end-to-end (e2e) with PactumJS.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Pre-requirements
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+To run this project, you will need:
+
+- [git](https://git-scm.com/downloads) (I've used version `2.26.2`)
+- [nodejs](https://nodejs.org/en/) (I've used version `v16.15.0`)
+- NPM (I've used version `8.5.5`)
+- [Yarn](https://yarnpkg.com/) (I've used version 1.22.15)
+- [Docker](https://www.docker.com/) (I've used Docker version 20.10.14 with Docker Desktop and wsl2)
+**Note:** When installing nodejs, NPM is automatically installed too.
 
 ## Installation
 
-```bash
-$ npm install
-```
+First clone the repo into your machine with: 
+`git clone https://github.com/eduardorerick/nestjs-bookmarks.git`
 
-## Running the app
+To install the dev dependencies, run: 
+`yarn`
 
-```bash
-# development
-$ npm run start
+## Configuring the environment variables
 
-# watch mode
-$ npm run start:dev
+I uploaded the env files so you can use it for test!
 
-# production mode
-$ npm run start:prod
-```
+## Importing to insomnia
 
-## Test
+You can import the Insomnia.yaml file to Insomnia to see all the endpoints
 
-```bash
-# unit tests
-$ npm run test
+## Running the database 
 
-# e2e tests
-$ npm run test:e2e
+In this project, I run the database with a postgres image on docker.
 
-# test coverage
-$ npm run test:cov
-```
+you can run the database and run the migrations with the command: 
+`yarn db:dev:restart`
 
-## Support
+### Running the server 
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Run `yarn start:dev` to run the server on port 3333.
 
-## Stay in touch
+### Running the tests 
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+I make the tests run on a different docker db that i called 'test-db'
+You can run `yarn test:e2e` to up the test-db image, apply migrations and run tests.
 
-## License
+---
 
-Nest is [MIT licensed](LICENSE).
+Made with ❤️ by [Eduardo Rerick](https://github.com/eduardorerick).
