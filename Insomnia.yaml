@@ -1,0 +1,318 @@
+_type: export
+__export_format: 4
+__export_date: 2022-05-01T17:38:24.065Z
+__export_source: insomnia.desktop.app:v2022.3.0
+resources:
+  - _id: req_39d7aa3141de4820bf604dfd1b3afcca
+    parentId: fld_f3f4217e2b7147159705ded17e481253
+    modified: 1651426655845
+    created: 1651426564196
+    url: "{{ _.baseUrl }}/bookmarks/:id"
+    name: Delete bookmark
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.access_token }}"
+    metaSortKey: -1651426564196
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f3f4217e2b7147159705ded17e481253
+    parentId: wrk_26ece40a0dc44addb70e6fdba42e07bb
+    modified: 1651425927291
+    created: 1651425917018
+    name: Bookmark
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1651425917018
+    _type: request_group
+  - _id: wrk_26ece40a0dc44addb70e6fdba42e07bb
+    parentId: null
+    modified: 1651344122321
+    created: 1651344122321
+    name: New Document
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_0c3ec1f2f77e4a3e9c3608bb06102883
+    parentId: fld_f3f4217e2b7147159705ded17e481253
+    modified: 1651426491859
+    created: 1651426415826
+    url: "{{ _.baseUrl }}/bookmarks/:id"
+    name: Get Bookmark by id
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_5d6e17831f4647dcafe7d42bf7703ef3
+        name: ""
+        value: ""
+        description: ""
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.access_token }}"
+    metaSortKey: -1651426415826
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_32842cf37347467ea4bb1b6d7342c604
+    parentId: fld_f3f4217e2b7147159705ded17e481253
+    modified: 1651426556680
+    created: 1651426415817
+    url: "{{ _.baseUrl }}/bookmarks/:id"
+    name: Edit Bookmark by id
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Title test edited",
+        	"description": "Description test edited",
+        	"link": "https://github.com/eduardorerick"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_70500611618947ab84b4dde2e6b51076
+    authentication:
+      type: bearer
+      token: "{{ _.access_token }}"
+    metaSortKey: -1651426415817
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7777480aa43546aaa0f0ad077297906c
+    parentId: fld_f3f4217e2b7147159705ded17e481253
+    modified: 1651426519494
+    created: 1651426138665
+    url: "{{ _.baseUrl }}/bookmarks"
+    name: Create Bookmark
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Title test",
+        	"description": "Description test",
+        	"link": "https://github.com/eduardorerick"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5a240a4fb4b540bc9cfdc3713a635c30
+    authentication:
+      type: bearer
+      token: "{{ _.access_token }}"
+    metaSortKey: -1651426138665
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eaed47d094fe43e6b5eca0eabbe0a366
+    parentId: fld_f3f4217e2b7147159705ded17e481253
+    modified: 1651426590146
+    created: 1651425947102
+    url: "{{ _.baseUrl }}/bookmarks"
+    name: Get Bookmarks
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.access_token }}"
+    metaSortKey: -1651425947102
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_82249a5772474800805c993f29ba3f67
+    parentId: fld_0e423469f28d45a39baf474872d278f9
+    modified: 1651426570674
+    created: 1651344122384
+    url: http://localhost:3333/users/me
+    name: Me
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.access_token }}"
+    metaSortKey: -1651425911831.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0e423469f28d45a39baf474872d278f9
+    parentId: wrk_26ece40a0dc44addb70e6fdba42e07bb
+    modified: 1651425921520
+    created: 1651425912848
+    name: User
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1651425912848
+    _type: request_group
+  - _id: req_21f1b310e9b24190ac4a94a2181a8e9f
+    parentId: fld_9a31fe61e7ea40bb8162f7d35b134f66
+    modified: 1651426668160
+    created: 1651411589912
+    url: http://localhost:3333/auth/signin
+    name: Signin
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "edu@teste.com",
+        	"password": "123123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75be2b1028594929b22fbd564ce6a968
+    authentication: {}
+    metaSortKey: -1651344122334
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9a31fe61e7ea40bb8162f7d35b134f66
+    parentId: wrk_26ece40a0dc44addb70e6fdba42e07bb
+    modified: 1651425908782
+    created: 1651425908782
+    name: Auth
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1651425908782
+    _type: request_group
+  - _id: req_b197035eb9064ab89f7a80328e151b03
+    parentId: fld_9a31fe61e7ea40bb8162f7d35b134f66
+    modified: 1651426396268
+    created: 1651411594850
+    url: http://localhost:3333/auth/signup
+    name: Signup
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "edu@teste.com",
+        	"password": "123123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75be2b1028594929b22fbd564ce6a968
+    authentication: {}
+    metaSortKey: -1651344122284
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_ad3ed967026a6c7a49d136dfe4bd2746de701f06
+    parentId: wrk_26ece40a0dc44addb70e6fdba42e07bb
+    modified: 1651426634095
+    created: 1651344122373
+    name: Base Environment
+    data:
+      baseUrl: http://localhost:3333
+      access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiZWR1QHRlc3RlLmNvbSIsImlhdCI6MTY1MTQyNjA1OCwiZXhwIjoxNjUxNDI2OTU4fQ.tgmM6N4YFTO0ZoaPWgTUtQKeHedVt-kBHmDs48ZjNJI
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+        - access_token
+    color: null
+    isPrivate: false
+    metaSortKey: 1651344122373
+    _type: environment
+  - _id: jar_ad3ed967026a6c7a49d136dfe4bd2746de701f06
+    parentId: wrk_26ece40a0dc44addb70e6fdba42e07bb
+    modified: 1651344122378
+    created: 1651344122378
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_f6feedd596f0453b9b1224f1af67179f
+    parentId: wrk_26ece40a0dc44addb70e6fdba42e07bb
+    modified: 1651426117693
+    created: 1651344122364
+    fileName: Bookmarks CRUD NestJS
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_16122b78511443859ceba75a5c74f4d1
+    parentId: wrk_26ece40a0dc44addb70e6fdba42e07bb
+    modified: 1651344122387
+    created: 1651344122387
+    name: Example Test Suite
+    _type: unit_test_suite
+  - _id: env_218eef3c4fd04cf2a69dddd3a4014700
+    parentId: env_ad3ed967026a6c7a49d136dfe4bd2746de701f06
+    modified: 1651426655373
+    created: 1651426632504
+    name: Dev Env
+    data:
+      baseUrl: http://localhost:3333
+      access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiZWR1QHRlc3RlLmNvbSIsImlhdCI6MTY1MTQyNjA1OCwiZXhwIjoxNjUxNDI2OTU4fQ.tgmM6N4YFTO0ZoaPWgTUtQKeHedVt-kBHmDs48ZjNJI
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+        - access_token
+    color: null
+    isPrivate: false
+    metaSortKey: 1651426632504
+    _type: environment
